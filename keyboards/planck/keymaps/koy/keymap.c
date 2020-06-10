@@ -22,6 +22,7 @@
 enum planck_layers {
   _QWERTY,
   _ADNW,
+  _KOY,
   _COLEMAK,
   _DVORAK,
   _LOWER,
@@ -33,6 +34,7 @@ enum planck_layers {
 enum planck_keycodes {
   QWERTY = SAFE_RANGE,
   ADNW,
+  KOY,
   COLEMAK,
   DVORAK,
   PLOVER,
@@ -65,12 +67,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [_ADNW] = LAYOUT_planck_grid(
-		 KC_TAB,        	DE_K,    	DE_U,   	DE_UE, 		DE_F,		    DE_AE, 		    DE_V,     	DE_G,    	DE_C, 		DE_L,  		DE_J, 	    KC_DEL,
-		 KC_LSFT,    		DE_H,    	DE_I,    	DE_E,  		DE_A,  		    DE_O,  		    DE_D,     	DE_T,     	DE_R,		DE_N,   	DE_S,       RSFT_T(KC_ENT),
+		 KC_ESC,        	DE_K,    	DE_U,   	DE_UE, 		DE_F,		    DE_AE, 		    DE_V,     	DE_G,    	DE_C, 		DE_L,  		DE_J, 	    KC_BSPC,
+		 LT(LOWER, KC_TAB), DE_H,    	DE_I,    	DE_E,  		DE_A,  		    DE_O,  		    DE_D,     	DE_T,     	DE_R,		DE_N,   	DE_S,       KC_ENT,
 		 KC_LCTL,       	DE_Y,    	DE_X,    	DE_OE, 		DE_Z,		    DE_Q, 		    DE_B,     	DE_P,    	DE_W,		DE_M, 		DE_SS,	    KC_RCTL,
-		 KC_RGUI,      		KC_LALT, 	KC_COMM,KC_DOT, _______,LT(LOWER, KC_BSPC), LT(LOWER, KC_BSPC),LT(RAISE, KC_SPC),  KC_LEFT, 	KC_DOWN, 	KC_UP,      KC_RGHT
+		 KC_RGUI,      		KC_LALT, 	KC_COMM,KC_DOT, LT(LOWER, KC_BSPC),KC_LSFT, KC_LSFT,LT(RAISE, KC_SPC),KC_LEFT, 	KC_DOWN, 	KC_UP,      KC_RGHT
 ),
-
+[_KOY] = LAYOUT_planck_grid(
+		 KC_TAB,        	DE_K,    	KC_DOT,   	DE_O, 		KC_COMM,		DE_Y, 		    DE_V,     	DE_G,    	DE_C, 		DE_L,  		DE_SS, 	    DE_Z,
+		 KC_LSFT,    		DE_H,    	DE_A,    	DE_E,  		DE_I,  		    DE_U,  		    DE_D,     	DE_T,     	DE_R,		DE_N,   	DE_S,       DE_F,
+		 KC_LCTL,       	DE_X,    	DE_Q,    	DE_AE, 		DE_UE,		    DE_OE, 		    DE_B,     	DE_P,    	DE_W,		DE_M, 		DE_J,	    RCTL_T(KC_ENT),
+		 KC_RGUI,      		KC_LALT, 	KC_ENT,KC_DEL, LT(LOWER, KC_BSPC),LT(LOWER, KC_BSPC), LT(RAISE, KC_SPC),LT(RAISE, KC_SPC),  KC_LEFT, 	KC_DOWN, 	KC_UP,      KC_RGHT
+),
 /* Colemak
  * ,-----------------------------------------------------------------------------------.
  * | Tab  |   Q  |   W  |   F  |   P  |   G  |   J  |   L  |   U  |   Y  |   ;  | Bksp |
@@ -137,8 +144,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_RAISE] = LAYOUT_planck_grid(
-		KC_SLEP, 			ALGR(KC_E),	DE_UNDS, 	DE_LBRC, 	DE_RBRC, 	DE_CIRC, 	    DE_EXLM,	DE_LESS, 	DE_MORE, 	DE_EQL, 	DE_AMPR, KC_TRNS,
-		_ADJUST,	            DE_BSLS,	DE_SLSH,	DE_LCBR, 	DE_RCBR, 	DE_ASTR, 		DE_QST, 	DE_LPRN, 	DE_RPRN, 	DE_MINS, 	DE_COLN, DE_AT,
+		KC_SLEP, 			ALGR(KC_E),	DE_UNDS, 	DE_LBRC, 	DE_RBRC, 	DE_CIRC, 	    DE_EXLM,	DE_LESS, 	DE_MORE, 	DE_EQL, 	DE_AMPR, KC_DEL,
+		_ADJUST,	        DE_BSLS,	DE_SLSH,	DE_LCBR, 	DE_RCBR, 	DE_ASTR, 		DE_QST, 	DE_LPRN, 	DE_RPRN, 	DE_MINS, 	DE_COLN, DE_AT,
 		RGB_VAI, 			RGB_TOG, 	DE_HASH, 	DE_DLR, 	DE_PIPE, 	DE_TILD, 		DE_GRV, 	DE_PLUS, 	DE_PERC, 	DE_DQOT, 	DE_QUOT, DE_SCLN,
 		RGB_VAD, 			KC_TRNS, 	LCTL(KC_C),LCTL(KC_V), 	KC_TRNS, 	KC_TRNS, 		KC_TRNS, 	KC_TRNS,	KC_MPLY,	KC_MPRV,	KC_TRNS, KC_MNXT
 ),
@@ -176,7 +183,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_ADJUST] = LAYOUT_planck_grid(
     _______, RESET,   DEBUG,   RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
     _______, _______, MU_MOD,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, QWERTY,  COLEMAK,  DVORAK,  PLOVER,  ADNW,
-    _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  TERM_ON, TERM_OFF, _______, _______, _______,
+    _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  TERM_ON, TERM_OFF, _______, _______, KOY,
     _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______
 )
 
@@ -209,6 +216,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case ADNW:
       if (record->event.pressed) {
         set_single_persistent_default_layer(_ADNW);
+      }
+      return false;
+      break;
+    case KOY:
+      if (record->event.pressed) {
+        set_single_persistent_default_layer(_KOY);
       }
       return false;
       break;
