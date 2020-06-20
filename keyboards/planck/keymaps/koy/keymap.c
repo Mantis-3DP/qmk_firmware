@@ -67,10 +67,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [_ADNW] = LAYOUT_planck_grid(
-		 KC_ESC,        	DE_K,    	DE_U,   	DE_UE, 		DE_F,		    DE_AE, 		    DE_V,     	DE_G,    	DE_C, 		DE_L,  		DE_J, 	    KC_BSPC,
+		 KC_ESC,        	DE_K,    	DE_U,   	DE_UE, 		DE_F,		    DE_AE, 		    DE_V,     	DE_G,    	DE_C, 		DE_L,  		DE_J, 	    KC_DEL,
 		 LT(LOWER, KC_TAB), DE_H,    	DE_I,    	DE_E,  		DE_A,  		    DE_O,  		    DE_D,     	DE_T,     	DE_R,		DE_N,   	DE_S,       KC_ENT,
 		 KC_LCTL,       	DE_Y,    	DE_X,    	DE_OE, 		DE_Z,		    DE_Q, 		    DE_B,     	DE_P,    	DE_W,		DE_M, 		DE_SS,	    KC_RCTL,
-		 KC_RGUI,      		KC_LALT, 	KC_COMM,KC_DOT, LT(LOWER, KC_BSPC),KC_LSFT, KC_LSFT,LT(RAISE, KC_SPC),KC_LEFT, 	KC_DOWN, 	KC_UP,      KC_RGHT
+		 KC_RGUI,      		KC_LALT, 	KC_COMM,KC_DOT, LT(LOWER, KC_BSPC),LSFT_T(KC_BSPC), KC_LSFT,LT(RAISE, KC_SPC),KC_LEFT, 	KC_DOWN, 	KC_UP,      KC_RGHT
 ),
 [_KOY] = LAYOUT_planck_grid(
 		 KC_TAB,        	DE_K,    	KC_DOT,   	DE_O, 		KC_COMM,		DE_Y, 		    DE_V,     	DE_G,    	DE_C, 		DE_L,  		DE_SS, 	    DE_Z,
