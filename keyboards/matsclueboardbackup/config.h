@@ -42,6 +42,11 @@
 #define IS_COMMAND() ( \
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
 )
+/* combo settings */
+#define COMBO_TERM 20000
+#define COMBO_COUNT 3
+/* tap dance settings */
+#define TAPPING_TERM 175
 
 /* prevent stuck modifiers */
 #define PREVENT_STUCK_MODIFIERS
