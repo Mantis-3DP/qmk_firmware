@@ -16,7 +16,7 @@ F_CPU = 16000000
 
 #
 # LUFA specific
-#
+
 # Target architecture (see library "Board Types" documentation).
 ARCH = AVR8
 
@@ -57,3 +57,5 @@ RGBLIGHT_ENABLE = yes
 COMBO_ENABLE = yes
 TAP_DANCE_ENABLE = yes
 AUTO_SHIFT_ENABLE = no
+UNICODEMAP_ENABLE = yes
+UNICODE_ENABLE = no
