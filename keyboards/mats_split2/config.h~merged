@@ -18,8 +18,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
+#include "config_common.h"
+=======
 <<<<<<< HEAD:keyboards/claw44/keymaps/via/config.h
 #define MASTER_LEFT
 =======
 #include "config_common.h"
 >>>>>>> ae145ff5c9d3f630db8643be9222d5271d4c598a:keyboards/mats_split2/config.h
+>>>>>>> ae145ff5c9d3f630db8643be9222d5271d4c598a

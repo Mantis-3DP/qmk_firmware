@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 /*
 Copyright 2012 Jun Wako <wakojun@gmail.com>
 Copyright 2015 Jack Humbert
+=======
+<<<<<<< HEAD:keyboards/keebio/dsp40/config.h
+/* Copyright 2021 Danny Nguyen <danny@keeb.io>
+=======
+/*
+Copyright 2012 Jun Wako <wakojun@gmail.com>
+Copyright 2015 Jack Humbert
+>>>>>>> ae145ff5c9d3f630db8643be9222d5271d4c598a:keyboards/matsdactyl/4x6/config.h
+>>>>>>> ae145ff5c9d3f630db8643be9222d5271d4c598a
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -19,6 +29,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 #include "config_common.h"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:keyboards/keebio/dsp40/config.h
+=======
+>>>>>>> ae145ff5c9d3f630db8643be9222d5271d4c598a
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xFEED
@@ -42,3 +57,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // WS2812 RGB LED strip input and number of LEDs
 #define RGB_DI_PIN D3
 #define RGBLED_NUM 12
+<<<<<<< HEAD
+=======
+>>>>>>> ae145ff5c9d3f630db8643be9222d5271d4c598a:keyboards/matsdactyl/4x6/config.h
+>>>>>>> ae145ff5c9d3f630db8643be9222d5271d4c598a
