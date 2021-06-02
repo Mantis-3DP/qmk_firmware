@@ -20,6 +20,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #pragma once
-#define TAPPING_TERM 175
+#define TAP_CODE_DELAY 5
 #define COMBO_COUNT 3
 // #define USE_I2C

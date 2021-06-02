@@ -30,11 +30,11 @@ enum {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_65_iso_with_macro(
-    KC_F1,   KC_F2,   TD(TD_ESC_CAPS), 	DE_1, 	 	DE_2, 		DE_3, 		DE_4, 		DE_5, 		DE_6, 		DE_7, 		DE_8, 		DE_9, 		DE_0, 		DE_MINS, 	KC_DEL,  	KC_DEL,  	KC_BSPC, KC_HOME, \
-    KC_F3,   KC_F4,   KC_TAB, 			DE_K,   	DE_U,  	 	DE_OE, 		KC_DOT,		DE_Y, 		DE_Q,   	DE_G,   	DE_C, 		DE_L,  		DE_J, 		DE_LBRC, 	DE_RBRC,  	KC_END, \
-    KC_F5,   KC_F6,   KC_LSFT, 			DE_H,   	DE_I,   	DE_E,   	DE_A,  		DE_O,  		DE_D,   	DE_T,   	DE_R,		DE_N,   	DE_S, 		DE_F,		MO(3),		KC_ENT,  	KC_PGUP, \
-    KC_F7,   KC_F8,   KC_LCTL, 			DE_Z, 		DE_V,  		DE_X,   	DE_DQUO, 	DE_COMM,	DE_MINS, 	DE_B,   	DE_P,   	DE_W,		DE_M, 		DE_Z, 	 	KC_LSFT,	KC_UP, 	 	KC_PGDN, \
-    KC_F9,   KC_F10,  KC_LGUI, 			KC_LALT, 	MO(1), 	LCTL(KC_C),LT(3, KC_SPC), LT(3, KC_SPC), LT(3, KC_SPC), LCTL(KC_V), 	KC_RGUI, 		KC_RCTL, 	KC_LEFT, 	KC_DOWN, 	KC_RGHT
+    KC_F1,   KC_F2,   TD(TD_ESC_CAPS), 	DE_1, 	 	DE_2, 		DE_3, 		DE_4, 		DE_5, 		DE_6, 		DE_7, 		DE_8, 		DE_9, 		DE_0, 		KC_TRNS, 	KC_TRNS,  	KC_TRNS,  	KC_BSPC, KC_INS, \
+    KC_F3,   KC_F4,   KC_TAB, 			DE_K,   	DE_U,  	 	DE_OE, 		KC_DOT,		DE_Y, 		DE_Q,   	DE_G,   	DE_C, 		DE_L,  		DE_J, 		KC_TRNS, 	KC_TRNS,  	KC_DEL, \
+    KC_F5,   KC_F6,   KC_LSFT, 			DE_H,   	DE_I,   	DE_E,   	DE_A,  		DE_O,  		DE_D,   	DE_T,   	DE_R,		DE_N,   	DE_S, 		DE_F,		KC_TRNS,	KC_ENT,  	MO(1), \
+    KC_F7,   KC_F8,   KC_LCTL, 			KC_TRNS, 	DE_V,  		DE_X,   	DE_DQUO, 	DE_COMM,	DE_MINS, 	DE_B,   	DE_P,   	DE_W,		DE_M, 		DE_Z, 	 	KC_LSFT,	KC_UP, 	 	KC_TRNS, \
+    KC_F9,   KC_F10,  KC_LGUI, 			KC_LALT, 	LCTL(KC_C),	LCTL(KC_V),LT(3, KC_BSPC), LT(3, KC_BSPC), 		LT(3, KC_SPC), LCTL(KC_V), 	KC_TRNS, 	KC_RCTL, 			KC_LEFT, 	KC_DOWN, 	KC_RGHT
   ),
   
   [3] = LAYOUT_65_iso_with_macro(
@@ -45,11 +45,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS,   KC_TRNS,  	KC_TRNS, 	KC_TRNS, 		KC_TRNS, 	KC_TRNS,	KC_TRNS,     	KC_TRNS,	KC_TRNS, 	KC_TRNS, 	KC_TRNS,  		KC_TRNS,	KC_MPRV, 		KC_MPLY,  	KC_MNXT
   ),
   [1] = LAYOUT_65_iso_with_macro(
-    _______, _______, KC_GESC, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_DEL,  KC_BSPC, RESET, \
+    _______, _______, KC_GESC, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_TRNS, KC_BSPC, RESET, \
     _______, _______, RGB_TOG, RGB_MOD, _______, KC_UP,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
-    _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
+    _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, _______, RGB_M_P , RGB_M_B, RGB_M_R, RGB_M_SW, RGB_M_SN, _______, _______, \
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
-    _______, _______, KC_TILD, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______, _______
+    _______, _______, KC_TILD, _______, _______, _______, _______,          _______, _______, _______, _______, _______, RGB_HUI, RGB_SAI, RGB_VAI
   )
 };
 
